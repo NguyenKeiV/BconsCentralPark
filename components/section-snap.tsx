@@ -15,6 +15,7 @@ export default function SectionSnap() {
     let ignoreScroll = false;
     let ignoreScrollTimer: number | undefined;
     let cooldownUntil = 0;
+    let wheelActiveUntil = 0;
     let lastY = window.scrollY;
 
     const snapToSection = (direction?: number) => {
@@ -48,7 +49,7 @@ export default function SectionSnap() {
           ignoreScroll = true;
           cooldownUntil = performance.now() + 180;
           window.clearTimeout(ignoreScrollTimer);
-          ignoreScrollTimer = window.setTimeout(() => { ignoreScroll = false; }, 360);
+          ignoreScrollTimer = window.setTimeout(() => { ignoreScroll = false; }, 700);
         },
         onInterrupt: () => { locked = false; cooldownUntil = performance.now() + 180; lastY = window.scrollY; },
       });
@@ -57,6 +58,12 @@ export default function SectionSnap() {
     const onWheel = (event: WheelEvent) => {
       if (event.defaultPrevented) return;
       if (Math.abs(event.deltaY) < 2) return;
+      if (ignoreScroll) {
+        event.preventDefault();
+        wheelDelta = 0;
+        window.clearTimeout(wheelTimer);
+        return;
+      }
       if (performance.now() < cooldownUntil) {
         wheelDelta = 0;
         window.clearTimeout(wheelTimer);
@@ -68,6 +75,7 @@ export default function SectionSnap() {
         window.clearTimeout(wheelTimer);
         return;
       }
+      wheelActiveUntil = performance.now() + 280;
       wheelDelta += event.deltaY;
       window.clearTimeout(wheelTimer);
       wheelTimer = window.setTimeout(() => {
@@ -78,7 +86,7 @@ export default function SectionSnap() {
     };
 
     const onScroll = () => {
-      if (locked || ignoreScroll || performance.now() < cooldownUntil) return;
+      if (locked || ignoreScroll || performance.now() < cooldownUntil || performance.now() < wheelActiveUntil) return;
       window.clearTimeout(scrollTimer);
       scrollTimer = window.setTimeout(() => snapToSection(), 150);
     };
