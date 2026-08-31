@@ -63,9 +63,12 @@ export default function SectionSnap() {
         event.preventDefault();
         wheelDelta = 0;
         window.clearTimeout(wheelTimer);
+        window.clearTimeout(ignoreScrollTimer);
+        ignoreScrollTimer = window.setTimeout(() => { ignoreScroll = false; lastY = window.scrollY; }, 700);
         return;
       }
       if (performance.now() < cooldownUntil) {
+        event.preventDefault();
         wheelDelta = 0;
         window.clearTimeout(wheelTimer);
         return;
