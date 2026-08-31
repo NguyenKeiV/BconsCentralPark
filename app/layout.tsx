@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className="min-h-full snap-y snap-mandatory scroll-smooth overflow-y-scroll"><body className="m-0 min-h-full bg-[#e8e4dd] font-sans"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    <html lang="vi" className="min-h-full scroll-smooth overflow-y-scroll"><body className="m-0 min-h-full bg-[#e8e4dd] font-sans"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       '@context': 'https://schema.org',
       '@graph': [
         {
