@@ -72,7 +72,7 @@ export default function FloorPlansSection() {
           </div>
           <div>
             <div className="mt-5 overflow-hidden border border-[#d6cdbd] bg-white p-3 shadow-[0_18px_50px_rgba(41,70,48,0.1)]">
-              <ImageLightbox size="floor" src={floorPlans[block][1]} alt={`Mặt bằng tầng điển hình tòa ${floorPlans[block][0]}`}><img data-reveal="details" className="block h-[60vh] w-full object-contain object-center max-md:h-[52vh]" src={floorPlans[block][1]} alt={`Mặt bằng tầng điển hình tòa ${floorPlans[block][0]}`} /></ImageLightbox>
+              <ImageLightbox size="floor" src={floorPlans[block][1]} alt={`Mặt bằng tầng điển hình tòa ${floorPlans[block][0]}`}><img loading="lazy" decoding="async" data-reveal="details" className="block h-[60vh] w-full object-contain object-center max-md:h-[52vh]" src={floorPlans[block][1]} alt={`Mặt bằng tầng điển hình tòa ${floorPlans[block][0]}`} /></ImageLightbox>
             </div>
           </div>
         </div> : <div className="mt-8">
@@ -81,7 +81,7 @@ export default function FloorPlansSection() {
           <div data-reveal="details" className="mt-8 grid max-h-[58vh] grid-cols-2 gap-5 overflow-y-auto overscroll-contain pr-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid-cols-4 max-sm:max-h-[62vh] max-sm:grid-cols-1" onWheel={(event) => event.stopPropagation()}>
             {apartments[planType].map(([code, tt, ll, image]) => <article data-reveal="row" key={code} className="group overflow-hidden border border-[#d6cdbd] bg-white shadow-[0_12px_30px_rgba(41,70,48,0.08)] transition-transform duration-500 hover:-translate-y-1">
               <div className="flex items-center justify-between gap-3 border-b border-[#e4ded3] px-4 py-3"><h3 className="m-0 font-serif text-[20px] font-normal text-[#c7922c]">Căn {code}</h3><div className="text-right text-[10px] leading-[1.35] text-[#526157]"><span className="block">TT: {tt}</span><span className="block">LL: {ll}</span></div></div>
-              <ImageLightbox size="apartment" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`}><img className="h-[30vh] min-h-[200px] w-full object-contain p-4" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`} /></ImageLightbox>
+              <ImageLightbox size="apartment" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`}><img loading="lazy" decoding="async" className="h-[30vh] min-h-[200px] w-full object-contain p-4" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`} /></ImageLightbox>
             </article>)}
           </div>
         </div>}

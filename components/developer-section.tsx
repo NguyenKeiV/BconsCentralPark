@@ -18,7 +18,7 @@ export default function DeveloperSection() {
         </div>
 
         <div data-reveal="details" className="relative overflow-hidden border border-[#d6cdbd] bg-white p-3 shadow-[0_18px_50px_rgba(41,70,48,0.12)]">
-          <ImageLightbox size="floor" src="/assets/cdt_ra_so.jpg" alt="Chủ đầu tư BCONS Central Park và tiến độ pháp lý"><img data-reveal="row" className="block h-[68vh] w-full object-cover object-center transition-transform duration-700 hover:scale-[1.015] max-lg:h-[55vh] max-sm:h-[42vh]" src="/assets/cdt_ra_so.jpg" alt="Chủ đầu tư BCONS Central Park và tiến độ pháp lý" /></ImageLightbox>
+          <ImageLightbox size="floor" src="/assets/cdt_ra_so.jpg" alt="Chủ đầu tư BCONS Central Park và tiến độ pháp lý"><img loading="lazy" decoding="async" data-reveal="row" className="block h-[68vh] w-full object-cover object-center transition-transform duration-700 hover:scale-[1.015] max-lg:h-[55vh] max-sm:h-[42vh]" src="/assets/cdt_ra_so.jpg" alt="Chủ đầu tư BCONS Central Park và tiến độ pháp lý" /></ImageLightbox>
           <p className="pointer-events-none absolute bottom-7 left-7 rounded-full bg-[#294630]/85 px-4 py-2 text-[10px] tracking-[.1em] text-white">CHỦ ĐẦU TƯ · BCONS</p>
         </div>
       </ScrollReveal>

@@ -90,7 +90,7 @@ export default function LocationSection() {
           </div>
           <div className="flex flex-col overflow-hidden border border-[#d6cdbd] bg-white p-3 shadow-[0_18px_50px_rgba(41,70,48,0.1)]">
             <button type="button" className="group relative block w-full cursor-zoom-in overflow-hidden bg-white text-left" onClick={openMap} aria-label="Mở bản đồ kích thước lớn">
-              <img className="h-[40vh] min-h-[280px] w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02] max-lg:h-[36vh] max-sm:h-[52vh] max-sm:min-h-[330px]" src="/assets/map_lien_ket_vung.jpg" alt={mapType === 'region' ? 'Bản đồ liên kết vùng BCONS Central Park' : 'Bản đồ nội khu BCONS Central Park'} />
+              <img loading="lazy" decoding="async" className="h-[40vh] min-h-[280px] w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02] max-lg:h-[36vh] max-sm:h-[52vh] max-sm:min-h-[330px]" src="/assets/map_lien_ket_vung.jpg" alt={mapType === 'region' ? 'Bản đồ liên kết vùng BCONS Central Park' : 'Bản đồ nội khu BCONS Central Park'} />
               <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-[#294630]/85 px-3 py-2 text-[10px] tracking-[.08em] text-white opacity-0 transition-opacity group-hover:opacity-100">CLICK ĐỂ PHÓNG TO</span>
             </button>
             <p data-reveal="details" className="mt-auto px-4 pb-1 pt-3 text-[13px] leading-[1.5] text-[#526157]">Tọa lạc trên đường Phan Trung, BCONS Central Park kết nối nhanh chóng đến những tiện ích thiết yếu, trung tâm thương mại, giáo dục, y tế và các khu công nghiệp trọng điểm của Biên Hòa.</p>
