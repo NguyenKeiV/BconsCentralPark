@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+.gold-flow {
+  background-image: linear-gradient(110deg, #9b6b1c 0%, #d7b36a 35%, #ffe6a3 50%, #d7b36a 65%, #9b6b1c 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
