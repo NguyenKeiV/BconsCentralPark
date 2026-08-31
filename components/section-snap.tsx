@@ -17,6 +17,7 @@ export default function SectionSnap() {
     let cooldownUntil = 0;
     let wheelActiveUntil = 0;
     let lastY = window.scrollY;
+    const wheelScrollScale = 0.7;
 
     const snapToSection = (direction?: number) => {
       if (locked) return;
@@ -75,6 +76,8 @@ export default function SectionSnap() {
         window.clearTimeout(wheelTimer);
         return;
       }
+      event.preventDefault();
+      window.scrollBy({ top: event.deltaY * wheelScrollScale, left: 0, behavior: 'auto' });
       wheelActiveUntil = performance.now() + 280;
       wheelDelta += event.deltaY;
       window.clearTimeout(wheelTimer);
