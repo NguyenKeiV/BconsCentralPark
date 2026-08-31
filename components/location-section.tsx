@@ -1,5 +1,6 @@
  'use client';
 
+import { createPortal } from 'react-dom';
 import { useEffect, useRef, useState } from 'react';
 import ScrollReveal from '@/components/scroll-reveal';
 
@@ -99,13 +100,13 @@ export default function LocationSection() {
           </div>
         </div>
       </ScrollReveal>
-      {mapOpen && <div data-image-modal className="fixed inset-0 z-[80] grid place-items-center bg-[#10251c]/90 p-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Bản đồ BCONS Central Park" onClick={closeMap} onWheel={(event) => { event.preventDefault(); event.stopPropagation(); }}>
+      {mapOpen && typeof document !== 'undefined' && createPortal(<div data-image-modal className="fixed inset-0 z-[80] grid place-items-center bg-[#10251c]/90 p-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Bản đồ BCONS Central Park" onClick={closeMap} onWheel={(event) => { event.preventDefault(); event.stopPropagation(); }}>
         <div ref={viewportRef} className={'relative flex h-fit w-fit max-h-[82vh] max-w-[84vw] items-center justify-center overflow-hidden rounded-sm border border-white/20 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.35)] ' + (dragRef.current.active ? 'cursor-grabbing' : zoom > 1 ? 'cursor-grab' : 'cursor-zoom-in')} onClick={(event) => event.stopPropagation()} onWheel={handleMapWheel} onPointerDown={(event) => { if (zoom > 1) { dragRef.current = { active: true, x: event.clientX - offset.x, y: event.clientY - offset.y }; event.currentTarget.setPointerCapture(event.pointerId); } }} onPointerMove={(event) => { if (dragRef.current.active) setOffset(clampOffset({ x: event.clientX - dragRef.current.x, y: event.clientY - dragRef.current.y })); }} onPointerUp={(event) => { dragRef.current.active = false; event.currentTarget.releasePointerCapture(event.pointerId); }} onPointerCancel={() => { dragRef.current.active = false; }}>
           <img ref={imageRef} className="block max-h-[82vh] max-w-[84vw] select-none object-contain" style={{ transform: `translate3d(${offset.x}px, ${offset.y}px, 0) scale(${zoom})`, transformOrigin: 'center center' }} src="/assets/map_lien_ket_vung.jpg" alt="Bản đồ phóng to BCONS Central Park" draggable={false} />
           <button type="button" className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/70 bg-[#10251c]/75 text-3xl font-light leading-none text-white transition-colors hover:bg-[#c7922c]" onClick={closeMap} aria-label="Đóng bản đồ">×</button>
         </div>
         <span className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/30 px-4 py-2 text-[10px] tracking-[.12em] text-white/85">SCROLL ĐỂ THU PHÓNG · {Math.round(zoom * 100)}%</span>
-      </div>}
+      </div>, document.body)}
     </section>
   );
 }
