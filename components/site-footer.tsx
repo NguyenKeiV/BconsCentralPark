@@ -3,7 +3,7 @@ export default function SiteFooter() {
     <footer className="relative overflow-hidden bg-transparent py-4 text-[#f1eee5] max-md:py-4" aria-label="Chân trang BCONS Central Park">
       <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-[1.1fr_1fr_1fr] gap-12 border-b border-white/15 pb-10 max-md:grid-cols-1 max-md:gap-8">
         <div>
-          <a href="#top" className="inline-block w-[150px] transition-opacity hover:opacity-75"><img src="/assets/logo.png" alt="BCONS Central Park" className="block w-full" /></a>
+          <a href="#top" className="inline-block w-[150px] transition-opacity hover:opacity-75"><img src="/assets/logo.webp" alt="BCONS Central Park" className="block w-full" width="800" height="314" /></a>
           <p className="mt-5 max-w-[310px] text-[13px] leading-[1.7] text-white/65">Căn hộ chuẩn xanh giữa lòng Biên Hòa. Không gian sống hiện đại, kết nối tiện nghi và giá trị bền vững.</p>
         </div>
         <div>

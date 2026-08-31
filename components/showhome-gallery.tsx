@@ -4,17 +4,17 @@ import { useEffect, useRef } from 'react';
 import ImageLightbox from '@/components/image-lightbox';
 
 const showhomeImages = [
-  '/assets/anh_nha_mau1.jpg',
-  '/assets/anh_nha_mau2.jpg',
-  '/assets/anh_nha_mau3.jpg',
-  '/assets/anh_nha_mau4.jpg',
-  '/assets/anh_nha_mau5.jpg',
-  '/assets/anh_nha_mau6.jpg',
-  '/assets/anh_nha_mau7.jpg',
-  '/assets/anh_nha_mau8.jpg',
-  '/assets/anh_nha_mau9.jpg',
-  '/assets/anh_nha_mau10.jpg',
-  '/assets/anh_nha_mau11.jpg',
+  '/assets/anh_nha_mau1.webp',
+  '/assets/anh_nha_mau2.webp',
+  '/assets/anh_nha_mau3.webp',
+  '/assets/anh_nha_mau4.webp',
+  '/assets/anh_nha_mau5.webp',
+  '/assets/anh_nha_mau6.webp',
+  '/assets/anh_nha_mau7.webp',
+  '/assets/anh_nha_mau8.webp',
+  '/assets/anh_nha_mau9.webp',
+  '/assets/anh_nha_mau10.webp',
+  '/assets/anh_nha_mau11.webp',
 ];
 
 function MovingStrip({ reverse = false }: { reverse?: boolean }) {

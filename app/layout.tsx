@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
     siteName: 'BCONS Central Park Biên Hòa',
     title: 'BCONS Central Park Biên Hòa | Căn hộ BCONS Tam Hiệp',
     description: 'Khám phá vị trí, tiện ích, mặt bằng và không gian sống tại BCONS Central Park, Tam Hiệp, Biên Hòa.',
-    images: [{ url: '/assets/banner.jpg', width: 1920, height: 1080, alt: 'Phối cảnh BCONS Central Park tại Biên Hòa' }],
+    images: [{ url: '/assets/banner.webp', width: 1600, height: 960, alt: 'Phối cảnh BCONS Central Park tại Biên Hòa' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BCONS Central Park Biên Hòa | Căn hộ BCONS Tam Hiệp',
     description: 'Thông tin vị trí, tiện ích, mặt bằng và tư vấn BCONS Central Park Biên Hòa.',
-    images: ['/assets/banner.jpg'],
+    images: ['/assets/banner.webp'],
   },
   robots: {
     index: true,
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
     'max-snippet': -1,
     'max-video-preview': -1,
   },
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } : undefined,
 };
 
 export default function RootLayout({
@@ -58,15 +60,25 @@ export default function RootLayout({
           name: 'BCONS Central Park',
           url: 'https://bcontamhiep.com/',
           description: 'Khu căn hộ BCONS Central Park tại phường Tam Hiệp, Biên Hòa.',
-          image: 'https://bcontamhiep.com/assets/banner.jpg',
+          image: 'https://bcontamhiep.com/assets/banner.webp',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Đường Phan Trung, phường Tam Hiệp',
             addressLocality: 'Biên Hòa',
             addressCountry: 'VN',
           },
+          telephone: '+84979083300',
+          sameAs: [],
+        },
+        {
+          '@type': 'Organization',
+          '@id': 'https://bcontamhiep.com/#organization',
+          name: 'BCONS Central Park',
+          url: 'https://bcontamhiep.com/',
+          logo: 'https://bcontamhiep.com/assets/logo.webp',
+          telephone: '+84979083300',
         },
       ],
-    }) }} />{children}</body></html>
+    }) }} />{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} strategy="afterInteractive" /> : null}{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');`}</Script> : null}{children}</body></html>
   );
 }

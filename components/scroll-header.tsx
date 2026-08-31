@@ -42,7 +42,7 @@ export default function ScrollHeader() {
           </span>
           <span>0979083300</span>
         </a>
-        <a className="relative z-10 w-[112px] max-sm:w-[94px]" href="#top" aria-label="BCONS Central Park"><img className="block h-auto w-full" src="/assets/logo.png" alt="BCONS Central Park" /></a>
+        <a className="relative z-10 w-[112px] max-sm:w-[94px]" href="#top" aria-label="BCONS Central Park"><img className="block h-auto w-full" src="/assets/logo.webp" alt="BCONS Central Park" width="800" height="314" /></a>
         <button className={'group relative z-10 justify-self-end rounded-full border px-[19px] py-[11px] text-[15px] font-medium transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_25px_rgba(214,166,58,0.25)] max-sm:px-[14px] max-sm:py-[10px] max-sm:text-[14px] ' + (scrolled ? 'border-black bg-transparent text-black hover:border-[#D6A63A] hover:bg-[#D6A63A] hover:text-white' : 'border-[#D6A63A] bg-white/10 text-[#D6A63A] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.15)] hover:bg-[#D6A63A] hover:text-white')} onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-menu">
           <span className="mr-[11px] inline-grid w-[23px] gap-1 align-middle">{[0, 1, 2].map((line) => <i key={line} className={'block h-px w-[23px] transition-colors ' + (scrolled ? 'bg-black group-hover:bg-white' : 'bg-[#F2C866] group-hover:bg-white')} />)}</span>Menu
         </button>

@@ -5,9 +5,9 @@ import ScrollReveal from '@/components/scroll-reveal';
 import ImageLightbox from '@/components/image-lightbox';
 
 const floorPlans = [
-  ['TAMARIND', '/assets/mat_bang_block_tamarind_tang_3.jpg'],
-  ['BAMBOO', '/assets/mat_bang_block_bamboo_tang_3.jpg'],
-  ['ORCHID', '/assets/mat_bang_block_orchid_tang_3.jpg'],
+  ['TAMARIND', '/assets/mat_bang_block_tamarind_tang_3.webp'],
+  ['BAMBOO', '/assets/mat_bang_block_bamboo_tang_3.webp'],
+  ['ORCHID', '/assets/mat_bang_block_orchid_tang_3.webp'],
 ] as const;
 
 const apartments = {
