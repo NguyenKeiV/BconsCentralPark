@@ -58,7 +58,6 @@ export default function SectionSnap() {
       if (event.defaultPrevented) return;
       if (Math.abs(event.deltaY) < 2) return;
       if (performance.now() < cooldownUntil) {
-        event.preventDefault();
         wheelDelta = 0;
         window.clearTimeout(wheelTimer);
         return;
@@ -69,14 +68,13 @@ export default function SectionSnap() {
         window.clearTimeout(wheelTimer);
         return;
       }
-      event.preventDefault();
       wheelDelta += event.deltaY;
       window.clearTimeout(wheelTimer);
       wheelTimer = window.setTimeout(() => {
         const direction = wheelDelta > 0 ? 1 : -1;
         wheelDelta = 0;
         snapToSection(direction);
-      }, 120);
+      }, 180);
     };
 
     const onScroll = () => {
