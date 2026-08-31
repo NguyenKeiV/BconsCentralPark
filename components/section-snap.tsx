@@ -39,18 +39,18 @@ export default function SectionSnap() {
       wheelDelta = 0;
       locked = true;
       gsap.to(window, {
-        duration: 1.25,
-        ease: 'power4.inOut',
+        duration: 0.78,
+        ease: 'power2.out',
         scrollTo: { y: targetTop, autoKill: false },
         onComplete: () => {
           lastY = window.scrollY;
           locked = false;
           ignoreScroll = true;
-          cooldownUntil = performance.now() + 650;
+          cooldownUntil = performance.now() + 180;
           window.clearTimeout(ignoreScrollTimer);
-          ignoreScrollTimer = window.setTimeout(() => { ignoreScroll = false; }, 800);
+          ignoreScrollTimer = window.setTimeout(() => { ignoreScroll = false; }, 360);
         },
-        onInterrupt: () => { locked = false; cooldownUntil = performance.now() + 650; lastY = window.scrollY; },
+        onInterrupt: () => { locked = false; cooldownUntil = performance.now() + 180; lastY = window.scrollY; },
       });
     };
 
@@ -76,13 +76,13 @@ export default function SectionSnap() {
         const direction = wheelDelta > 0 ? 1 : -1;
         wheelDelta = 0;
         snapToSection(direction);
-      }, 220);
+      }, 120);
     };
 
     const onScroll = () => {
       if (locked || ignoreScroll || performance.now() < cooldownUntil) return;
       window.clearTimeout(scrollTimer);
-      scrollTimer = window.setTimeout(() => snapToSection(), 220);
+      scrollTimer = window.setTimeout(() => snapToSection(), 150);
     };
 
     const onLightboxClose = () => {
