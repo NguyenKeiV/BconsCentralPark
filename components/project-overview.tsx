@@ -26,7 +26,7 @@ export default function ProjectOverview() {
       
       <div className="grid grid-cols-[.9fr_1.1fr] items-start gap-[8vw] max-md:grid-cols-1 max-md:gap-12">
         <div className="pt-[3vh] max-md:pt-0">
-          <p data-reveal="eyebrow" className="mb-5 text-[10px] tracking-[.26em] text-[#d7b36a]">Bcons Biên Hòa</p>
+          <p data-reveal="eyebrow" className="mb-5 text-[10px] tracking-[.26em] text-[#d7b36a]">BCONS CENTRAL PARK · TAM HIỆP, BIÊN HÒA</p>
 <h2
   id="overview-title"
   data-reveal="title"
