@@ -48,7 +48,7 @@ export default function FloorPlansSection() {
   return (
     <section id="floor-plans" data-scroll-section className="snap-always snap-start relative isolate flex min-h-[100svh] flex-col justify-center overflow-hidden bg-[#f1eee5] px-[4%] pt-[8vh] pb-[5vh] text-[#294630] max-md:min-h-0 max-md:h-auto max-md:px-[7%] max-md:py-[10vh]" aria-labelledby="floor-plans-title">
       <ScrollReveal className="z-10 mx-auto w-full max-w-[1700px]">
-        <div className="absolute inset-x-0 top-[13vh] z-20 flex justify-center gap-3 max-sm:top-[10vh] max-sm:flex-wrap max-sm:gap-2">
+        <div className="absolute inset-x-0 top-[13vh] z-20 flex justify-center gap-3 max-md:static max-md:flex-col max-md:items-center max-md:pt-3 max-sm:gap-2">
           <div className="flex gap-3 max-sm:gap-2">
             <button className={'rounded-full border px-7 py-3 text-[11px] font-semibold tracking-[.08em] transition-all max-sm:px-4 max-sm:text-[9px] ' + (view === 'floor' ? 'border-[#c7922c] bg-[#c7922c] text-white shadow-[0_8px_20px_rgba(199,146,44,0.2)]' : 'border-[#c7922c] text-[#294630] hover:bg-[#c7922c]/10')} onClick={() => changeView('floor')}>MẶT BẰNG TẦNG</button>
             <button className={'rounded-full border px-7 py-3 text-[11px] font-semibold tracking-[.08em] transition-all max-sm:px-4 max-sm:text-[9px] ' + (view === 'apartment' ? 'border-[#c7922c] bg-[#c7922c] text-white shadow-[0_8px_20px_rgba(199,146,44,0.2)]' : 'border-[#c7922c] text-[#294630] hover:bg-[#c7922c]/10')} onClick={() => changeView('apartment')}>MẶT BẰNG CĂN</button>
@@ -81,7 +81,7 @@ export default function FloorPlansSection() {
           <div data-reveal="details" className="mt-8 grid max-h-[58vh] grid-cols-2 gap-5 overflow-y-auto overscroll-contain pr-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid-cols-4 max-sm:max-h-[62vh] max-sm:grid-cols-1" onWheel={(event) => event.stopPropagation()}>
             {apartments[planType].map(([code, tt, ll, image]) => <article data-reveal="row" key={code} className="group overflow-hidden border border-[#d6cdbd] bg-white shadow-[0_12px_30px_rgba(41,70,48,0.08)] transition-transform duration-500 hover:-translate-y-1">
               <div className="flex items-center justify-between gap-3 border-b border-[#e4ded3] px-4 py-3"><h3 className="m-0 font-serif text-[20px] font-normal text-[#c7922c]">Căn {code}</h3><div className="text-right text-[10px] leading-[1.35] text-[#526157]"><span className="block">TT: {tt}</span><span className="block">LL: {ll}</span></div></div>
-              <ImageLightbox size="apartment" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`}><img loading="lazy" decoding="async" className="h-[30vh] min-h-[200px] w-full object-contain p-4" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`} /></ImageLightbox>
+              <ImageLightbox size="apartment" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`}><img loading="lazy" decoding="async" className="h-[30vh] min-h-[200px] w-full object-contain p-4 max-sm:h-[220px]" src={image} alt={`Mặt bằng căn hộ ${code}, thông thủy ${tt}, tim tường ${ll}`} /></ImageLightbox>
             </article>)}
           </div>
         </div>}

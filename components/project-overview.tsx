@@ -38,7 +38,7 @@ export default function ProjectOverview() {
         <div data-reveal="details">
           <h3 className="mb-6 font-[Times_New_Roman,_Georgia,_serif] text-[clamp(25px,2.5vw,39px)] font-normal leading-[1.12] tracking-[-.04em]">TỔNG QUAN DỰ ÁN</h3>
           <dl className="border-t border-white/25">
-            {projectDetails.map(([label, value]) => <div data-reveal="row" key={label} className="grid grid-cols-[150px_1fr] gap-8 border-b border-white/15 py-2.5 max-sm:grid-cols-[112px_1fr] max-sm:gap-4"><dt className="text-[10px] leading-[1.2] tracking-[.1em] text-[#d9ded5]">{label}</dt><dd className="m-0 text-[14px] font-semibold leading-[1.3] text-white max-sm:text-[12px]">{value}</dd></div>)}
+            {projectDetails.map(([label, value]) => <div data-reveal="row" key={label} className="grid min-w-0 grid-cols-[150px_minmax(0,1fr)] gap-8 border-b border-white/15 py-2.5 max-sm:grid-cols-[112px_minmax(0,1fr)] max-sm:gap-4"><dt className="text-[10px] leading-[1.2] tracking-[.1em] text-[#d9ded5]">{label}</dt><dd className="m-0 min-w-0 break-words text-[14px] font-semibold leading-[1.3] text-white max-sm:text-[12px]">{value}</dd></div>)}
           </dl>
         </div>
       </div>

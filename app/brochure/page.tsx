@@ -15,7 +15,7 @@ export default function BrochurePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#10251c] text-[#f1eee5]">
       <nav className="fixed inset-x-0 top-0 z-[100] flex items-center justify-between border-b border-white/10 bg-[#10251c]/82 px-[8%] py-5 text-[11px] tracking-[.16em] text-white/75 backdrop-blur-md" aria-label="Điều hướng brochure">
-        <Link href="/" className="text-[#d7b36a] no-underline transition-colors hover:text-white">← BCONS CENTRAL PARK</Link>
+        <a href="/" className="text-[#d7b36a] no-underline transition-colors hover:text-white">← BCONS CENTRAL PARK</a>
         <a href={brochureUrl} download className="text-white/75 no-underline transition-colors hover:text-[#d7b36a]">TẢI BROCHURE ↓</a>
       </nav>
       <section className="relative isolate px-[8%] pb-10 pt-10 md:pb-14 md:pt-14">

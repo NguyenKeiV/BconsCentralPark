@@ -2,6 +2,7 @@ import HeroBanner from '@/components/hero-banner';
 import OpeningCurtain from '@/components/opening-curtain';
 import LocationSection from '@/components/location-section';
 import PoolSection from '@/components/pool-section';
+import AmenitiesSection from '@/components/amenities-section';
 import FloorPlansSection from '@/components/floor-plans-section';
 import DeveloperSection from '@/components/developer-section';
 import ConsultationSection from '@/components/consultation-section';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main id="top" className="min-h-screen overflow-hidden bg-[#e8e4dd]">
+    <main id="top" className="min-h-screen overflow-x-hidden bg-[#e8e4dd]">
       <OpeningCurtain />
       <ScrollHeader />
       <HeroBanner />
@@ -30,6 +31,7 @@ export default function HomePage() {
       <PoolSection />
       <FloorPlansSection />
       <ShowhomeGallery />
+      <AmenitiesSection />
       <DeveloperSection />
       <FaqSection />
       <ConsultationSection />
