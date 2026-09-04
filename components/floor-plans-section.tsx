@@ -12,21 +12,21 @@ const floorPlans = [
 
 const apartments = {
   '1PN': [
-    ['D1', '40,50 m²', '36,62 m²', '/assets/mat_bang_can_1pn_d1_40m2.jpg'],
-    ['D4', '38,60 m²', '34,17 m²', '/assets/mat_bang_can_1pn_d4_38m2.jpg'],
+    ['D1', '40,50 m²', '36,62 m²', '/assets/mat_bang_can_1pn_d1_40m2.webp'],
+    ['D4', '38,60 m²', '34,17 m²', '/assets/mat_bang_can_1pn_d4_38m2.webp'],
   ],
   '2PN': [
-    ['B1', '66,36 m²', '60,73 m²', '/assets/mat_bang_can_2pn_b1_66m2.jpg'],
-    ['B3', '60,30 m²', '53,49 m²', '/assets/mat_bang_can_2pn_b3_60m2.jpg'],
-    ['B5', '69,81 m²', '62,89 m²', '/assets/mat_bang_can_2pn_b5_69m2.jpg'],
-    ['C1', '52,49 m²', '47,47 m²', '/assets/mat_bang_can_2pn_c1_52m2.jpg'],
-    ['C2', '53,35 m²', '47,20 m²', '/assets/mat_bang_can_2pn_c2_53m2.jpg'],
-    ['C3', '50,47 m²', '45,23 m²', '/assets/mat_bang_can_2pn_c3_50m2.jpg'],
-    ['D5', '53,88 m²', '49,39 m²', '/assets/mat_bang_can_2pn_d5_53m2.jpg'],
+    ['B1', '66,36 m²', '60,73 m²', '/assets/mat_bang_can_2pn_b1_66m2.webp'],
+    ['B3', '60,30 m²', '53,49 m²', '/assets/mat_bang_can_2pn_b3_60m2.webp'],
+    ['B5', '69,81 m²', '62,89 m²', '/assets/mat_bang_can_2pn_b5_69m2.webp'],
+    ['C1', '52,49 m²', '47,47 m²', '/assets/mat_bang_can_2pn_c1_52m2.webp'],
+    ['C2', '53,35 m²', '47,20 m²', '/assets/mat_bang_can_2pn_c2_53m2.webp'],
+    ['C3', '50,47 m²', '45,23 m²', '/assets/mat_bang_can_2pn_c3_50m2.webp'],
+    ['D5', '53,88 m²', '49,39 m²', '/assets/mat_bang_can_2pn_d5_53m2.webp'],
   ],
   '3PN': [
-    ['A2', '87,14 m²', '79,79 m²', '/assets/mat_bang_can_3pn_a2_87m2.jpg'],
-    ['B8', '64,90 m²', '58,42 m²', '/assets/mat_bang_can_3pn_b8_64m2.jpg'],
+    ['A2', '87,14 m²', '79,79 m²', '/assets/mat_bang_can_3pn_a2_87m2.webp'],
+    ['B8', '64,90 m²', '58,42 m²', '/assets/mat_bang_can_3pn_b8_64m2.webp'],
   ],
 } as const;
 

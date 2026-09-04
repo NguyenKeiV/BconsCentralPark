@@ -8,7 +8,7 @@ const projectDetails = [
   ['QUỸ ĐẤT', '~ 3 Hecta'],
   ['QUY MÔ', '5 block cao 22 tầng + 2 hầm'],
   ['SỐ LƯỢNG CĂN HỘ', '2.820 căn hộ'],
-  ['LOẠI HÌNH CĂN HỘ', '1PN, 2PN, 3PN'],
+  ['LOẠI HÌNH CĂN HỘ', 'Studio, 1PN, 2PN, 3PN'],
   ['BÀN GIAO DỰ KIẾN', 'Quý 2/2029'],
 ] as const;
 

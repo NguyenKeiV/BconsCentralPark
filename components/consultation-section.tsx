@@ -43,7 +43,7 @@ export default function ConsultationSection() {
           <p data-reveal="eyebrow" className="mb-5 text-[11px] font-semibold uppercase tracking-[.3em] text-[#d7b36a]">BCONS CENTRAL PARK · BIÊN HÒA</p>
           <h2 data-reveal="title" id="consultation-title" className="font-[Times_New_Roman,_Georgia,_serif] text-[clamp(34px,3.8vw,60px)] font-normal uppercase leading-[.98] tracking-[-.045em]">Nhận thông tin<br /><em className="text-[.88em] normal-case text-[#d7b36a]">tư vấn riêng cho bạn</em></h2>
           <p data-reveal="details" className="mt-8 max-w-[500px] text-[15px] leading-[1.75] text-white/75">Giá bán và chính sách thanh toán được tư vấn theo từng thời điểm và nhu cầu thực tế. Để nhận thông tin mới nhất về căn hộ phù hợp, hãy để lại thông tin hoặc gọi trực tiếp cho chuyên viên tư vấn BCONS Central Park.</p>
-          <a data-reveal="row" href="tel:0979083300" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#d7b36a] px-6 py-3 text-[13px] font-semibold tracking-[.08em] text-[#d7b36a] transition-all duration-500 hover:bg-[#d7b36a] hover:text-[#294630]">GỌI 0979 083 300 <span aria-hidden="true">↗</span></a>
+          <a data-reveal="row" href="tel:0979083300" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#d7b36a] px-6 py-3 text-[13px] font-semibold tracking-[.08em] text-[#d7b36a] transition-all duration-500 hover:bg-[#d7b36a] hover:text-[#294630]">GỌI 0979 083 300</a>
         </div>
 
         <div data-reveal="details" className="rounded-[2rem] bg-[#f1eee5] p-8 text-[#294630] shadow-[0_24px_70px_rgba(0,0,0,0.18)] max-sm:rounded-[1.4rem] max-sm:p-6">

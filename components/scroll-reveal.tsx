@@ -22,12 +22,11 @@ export default function ScrollReveal({ children, className = '' }: { children: R
         if (select('leaf').length) timeline.to(select('leaf'), { opacity: 0.25, duration: 1.4, ease: 'power2.out' });
         if (select('eyebrow').length) timeline.to(select('eyebrow'), { x: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, '-=1.1');
         if (select('title').length) timeline.to(select('title'), { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.45');
-        if (select('gold-flow').length) gsap.to(select('gold-flow'), { backgroundPosition: '200% center', duration: 4, repeat: -1, ease: 'none' });
         if (select('details').length) timeline.to(select('details'), { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.65');
         if (select('row').length) timeline.to(select('row'), { y: 0, opacity: 1, duration: 0.7, stagger: 0.07, ease: 'power2.out' }, '-=0.5');
       };
 
-      const reset = () => { gsap.killTweensOf(select('gold-flow')); gsap.set(targets, { clearProps: 'all' }); gsap.set(select('gold-flow'), { backgroundPosition: '0% center' }); };
+      const reset = () => { gsap.set(targets, { clearProps: 'all' }); };
       if (select('leaf').length) gsap.set(select('leaf'), { opacity: 0 });
       if (select('eyebrow').length) gsap.set(select('eyebrow'), { x: -28, opacity: 0 });
       if (select('title').length) gsap.set(select('title'), { x: -64, opacity: 0 });

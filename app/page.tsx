@@ -9,6 +9,7 @@ import ShowhomeGallery from '@/components/showhome-gallery';
 import ProjectOverview from '@/components/project-overview';
 import ScrollHeader from '@/components/scroll-header';
 import FaqSection from '@/components/faq-section';
+import FloatingCta from '@/components/floating-cta';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function HomePage() {
       <DeveloperSection />
       <FaqSection />
       <ConsultationSection />
+      <FloatingCta />
     </main>
   );
 }
