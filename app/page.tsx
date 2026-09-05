@@ -4,6 +4,7 @@ import LocationSection from '@/components/location-section';
 import PoolSection from '@/components/pool-section';
 import AmenitiesSection from '@/components/amenities-section';
 import FloorPlansSection from '@/components/floor-plans-section';
+import InteriorHighlightSection from '@/components/interior-highlight-section';
 import DeveloperSection from '@/components/developer-section';
 import ConsultationSection from '@/components/consultation-section';
 import ShowhomeGallery from '@/components/showhome-gallery';
@@ -30,6 +31,7 @@ export default function HomePage() {
       <LocationSection />
       <PoolSection />
       <FloorPlansSection />
+      <InteriorHighlightSection />
       <ShowhomeGallery />
       <AmenitiesSection />
       <DeveloperSection />
