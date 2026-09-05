@@ -51,10 +51,10 @@ export default function ScrollHeader() {
             className={'group flex items-center rounded-full border px-[17px] py-[11px] text-[15px] font-medium no-underline transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_25px_rgba(214,166,58,0.25)] max-sm:px-[12px] max-sm:py-[10px] max-sm:text-[13px] ' + (scrolled ? 'border-black bg-transparent text-black hover:border-[#D6A63A] hover:bg-[#D6A63A] hover:text-white' : 'border-[#D6A63A] bg-white/10 text-[#D6A63A] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.15)] hover:bg-[#D6A63A] hover:text-white')}
             aria-label="Mở trải nghiệm 360 độ"
           >
-            Tham quan 360°
+            <span className="max-sm:hidden">Tham quan 360°</span><span className="hidden max-sm:inline">360°</span>
           </a>
-          <button className={'group rounded-full border px-[19px] py-[11px] text-[15px] font-medium transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_25px_rgba(214,166,58,0.25)] max-sm:px-[14px] max-sm:py-[10px] max-sm:text-[14px] ' + (scrolled ? 'border-black bg-transparent text-black hover:border-[#D6A63A] hover:bg-[#D6A63A] hover:text-white' : 'border-[#D6A63A] bg-white/10 text-[#D6A63A] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.15)] hover:bg-[#D6A63A] hover:text-white')} onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-menu">
-            <span className="mr-[11px] inline-grid w-[23px] gap-1 align-middle">{[0, 1, 2].map((line) => <i key={line} className={'block h-px w-[23px] transition-colors ' + (scrolled ? 'bg-black group-hover:bg-white' : 'bg-[#F2C866] group-hover:bg-white')} />)}</span>Menu
+          <button className={'group rounded-full border px-[19px] py-[11px] text-[15px] font-medium transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_25px_rgba(214,166,58,0.25)] max-sm:h-[40px] max-sm:w-[40px] max-sm:p-0 max-sm:text-[0px] ' + (scrolled ? 'border-black bg-transparent text-black hover:border-[#D6A63A] hover:bg-[#D6A63A] hover:text-white' : 'border-[#D6A63A] bg-white/10 text-[#D6A63A] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.15)] hover:bg-[#D6A63A] hover:text-white')} onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-menu">
+            <span className="mr-[11px] inline-grid w-[23px] gap-1 align-middle max-sm:mr-0">{[0, 1, 2].map((line) => <i key={line} className={'block h-px w-[23px] transition-colors ' + (scrolled ? 'bg-black group-hover:bg-white' : 'bg-[#F2C866] group-hover:bg-white')} />)}</span><span className="max-sm:hidden">Menu</span>
           </button>
         </div>
       </header>

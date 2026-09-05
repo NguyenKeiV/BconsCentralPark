@@ -24,7 +24,7 @@ export default function BrochurePages() {
   }, []);
 
   return <div ref={containerRef} className="mx-auto grid max-w-none gap-y-7 md:gap-y-12">
-    {pages.map((src, index) => <figure key={src} data-brochure-page className="group brochure-page relative m-0 overflow-hidden bg-white">
+    {pages.map((src, index) => <figure id={`brochure-page-${index + 1}`} key={src} data-brochure-page className="group brochure-page relative m-0 overflow-hidden bg-white scroll-mt-24">
       <img src={src} alt={`Brochure BCONS Central Park - trang ${index + 1}`} className="block h-auto w-full" loading={index < 2 ? 'eager' : 'lazy'} decoding="async" />
       <figcaption className="absolute bottom-3 right-3 rounded-full bg-[#10251c]/75 px-3 py-1.5 text-[10px] tracking-[.14em] text-white/85 opacity-0 transition-opacity duration-500 group-hover:opacity-100">{String(index + 1).padStart(2, '0')} / {pages.length}</figcaption>
     </figure>)}

@@ -3,7 +3,10 @@ import ScrollReveal from '@/components/scroll-reveal';
 export default function InteriorHighlightSection() {
   return (
     <section id="interior-highlight" data-scroll-section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-[#1b2c23] text-white max-md:min-h-[680px]" aria-labelledby="interior-highlight-title">
-      <img loading="lazy" decoding="async" src="/assets/anh_nha_mau10.webp" alt="Không gian nội thất nhà mẫu BCONS Central Park" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="1600" height="900" />
+      <picture className="absolute inset-0 -z-20 block h-full w-full">
+        <source media="(max-width: 767px)" srcSet="/assets/anh_nha_mau4_mobile.webp" />
+        <img loading="lazy" decoding="async" src="/assets/anh_nha_mau10.webp" alt="Không gian nội thất nhà mẫu BCONS Central Park" className="block h-full w-full object-cover object-center" width="1600" height="900" />
+      </picture>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,28,23,0.8)_0%,rgba(18,28,23,0.58)_38%,rgba(18,28,23,0.12)_75%,rgba(18,28,23,0.22)_100%)] max-md:bg-[linear-gradient(90deg,rgba(18,28,23,0.78),rgba(18,28,23,0.3))]" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#10251c]/45 via-transparent to-[#10251c]/10" />
 
