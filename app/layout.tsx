@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/assets/LOGO%20CENTRAL%20PARK%20NEN%20TRANG.jpg',
+    shortcut: '/assets/LOGO%20CENTRAL%20PARK%20NEN%20TRANG.jpg',
+    apple: '/assets/LOGO%20CENTRAL%20PARK%20NEN%20TRANG.jpg',
+  },
   openGraph: {
     type: 'website',
     locale: 'vi_VN',

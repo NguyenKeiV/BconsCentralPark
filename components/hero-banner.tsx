@@ -11,7 +11,7 @@ export default function HeroBanner() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[18%] bg-[linear-gradient(to_bottom,transparent_0%,rgba(41,70,48,0.28)_38%,#294630_100%)]" aria-hidden="true" />
       <ScrollReveal className="absolute left-1/2 top-[41%] z-10 w-[min(700px,80vw)] -translate-x-1/2 text-center font-serif text-[clamp(42px,4.2vw,69px)] font-bold leading-[1.05] tracking-[.015em] text-[#d7b36a] [text-shadow:0_2px_18px_rgba(0,0,0,.3)] max-sm:top-[25%] max-sm:w-[90vw] max-sm:text-[clamp(34px,9vw,55px)]">
         <h1 data-reveal="title gold-flow" id="hero-title" className="gold-flow m-0">Căn hộ chuẩn xanh<br />giữa lòng Biên Hòa</h1>
-        <p data-reveal="details" className="mt-4 text-[14px] font-sans font-normal tracking-normal max-sm:text-white max-sm:[text-shadow:0_1px_8px_rgba(0,0,0,.45)]">BCONS Central Park tại phường Tam Hiệp, Biên Hòa</p>
+        <p data-reveal="details" className="mt-4 text-[15px] font-sans font-normal tracking-normal text-white [text-shadow:0_1px_8px_rgba(0,0,0,.45)]">BCONS Central Park tại phường Tam Hiệp, Biên Hòa</p>
       </ScrollReveal>
       <a className="absolute bottom-[5.8%] left-1/2 z-10 grid -translate-x-1/2 justify-items-center gap-2 border-0 bg-transparent text-[11px] tracking-[.19em] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.25)]" href="#overview">
         <span>Scroll Down</span><b className="animate-bounce text-[25px] font-light">↓</b>
